@@ -7,7 +7,8 @@ document$.subscribe(() => {
     event.preventDefault();
     const value = new FormData(searchForm).get("q");
     if (!value) return;
-    window.location.assign(`/?q=${encodeURIComponent(value.toString())}`);
+    const target = new URL(searchForm.action, window.location.href);
+    target.searchParams.set("q", value.toString());
+    window.location.assign(target.href);
   });
 });
-

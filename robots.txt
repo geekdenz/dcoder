@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://geekdenz.github.io/dcoder/sitemap.xml
+Sitemap: https://dcoder.nz/sitemap.xml

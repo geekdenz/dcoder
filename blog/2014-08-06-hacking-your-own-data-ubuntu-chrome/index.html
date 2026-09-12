@@ -603,11 +603,11 @@
 </code></pre></div>
 <p>After a bit of trial and error, I figured out how to see all my Chrome passwords and from the command line! This doesn't mean that other people can see this information, because, as I said, the passwords are encrypted with your login data. However, it can be useful for yourself. You can like this automate putting your passwords into a Keepass database for example.</p>
 <p>Now, without further ado, the magic command:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>secret-tool<span class="w"> </span>search<span class="w"> </span>--all<span class="w"> </span>submit_element<span class="w"> </span><span class="s1">''</span><span class="p">|</span>less
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>secret-tool<span class="w"> </span>search<span class="w"> </span>--all<span class="w"> </span>submit_element<span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">|</span>less
 </code></pre></div>
 <p>You can then pipe this command into a file in your encrypted Private directory (maybe more in another post).</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>secret-tool<span class="w"> </span>search<span class="w"> </span>--all<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>submit_element<span class="w"> </span><span class="s1">''</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>submit_element<span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>&gt;<span class="w"> </span>~/Private/passwords.txt
 </code></pre></div>
 <p>WARNING: Absolutely make sure this directory is encrypted! I store the encryped version in my Dropbox, so not even Dropbox employees can read them.</p>

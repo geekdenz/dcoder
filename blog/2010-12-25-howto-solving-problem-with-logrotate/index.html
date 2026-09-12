@@ -606,8 +606,8 @@
 <p>Log into mysql as root</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>mysql -uroot -p
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>SET PASSWORD FOR `debian-sys-maint`@`localhost` = PASSWORD(&#39;newpass&#39;);
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>SET PASSWORD FOR `debian-sys-maint`@`%` = PASSWORD(&#39;newpass&#39;);
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>SET PASSWORD FOR `debian-sys-maint`@`localhost` = PASSWORD('newpass');
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>SET PASSWORD FOR `debian-sys-maint`@`%` = PASSWORD('newpass');
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>FLUSH PRIVILEGES;
 </code></pre></div>
 <p>Log out and it should be fixed.</p>

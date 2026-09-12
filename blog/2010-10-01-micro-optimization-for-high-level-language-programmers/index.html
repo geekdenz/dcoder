@@ -669,11 +669,11 @@ for (var i = 0; i &lt; somevar.length; i++) {
 <p>// javascript for (var i = -1, leni = somevar.length; ++i \&lt; leni;) { // do something with somevar[i] // THIS SAVES 20% PERFORMANCE FOR EACH LOOP // (ASSUMING YOU HAVE ONE MACHINE INSTRUCTION // IN THE LOOP)! }</p>
 <div class="highlight"><pre><span></span><code>&lt;p&gt;This only works if you know ahead of time, that somevar.length will not and need not change inside of the loop, which is mostly the case. This runs faster because somevar.length is re-evaluated every time it is called in every iteration of the top-most for-loop. If you give it a temporary variable the CPU can cache the leni variable in a register and check much quicker if i is smaller than that. I read also that ++i can be faster than i++ in some implementations of programming languages such as JavaScript in some browsers. It depends on how the low-level assembly for that is written. I have seen arguments that i++ and ++i have exactly the same amount of machine instructions, but also ++i is not less readable than i++ and it does not hurt to write it that way if it can cut down the number of instructions by one or two in each iteration.&lt;/p&gt;
 &lt;p&gt;Edit:&lt;br /&gt;
-You can use the same concepts in C(++). Actually the book &quot;Write Great Code&quot; talks about C and other lower level languages mainly. In C++ it would look like so, if you want to output a string char by char:&lt;/p&gt;
+You can use the same concepts in C(++). Actually the book "Write Great Code" talks about C and other lower level languages mainly. In C++ it would look like so, if you want to output a string char by char:&lt;/p&gt;
 ```cpp
 
 // C++
-char cstring[10] = &quot;My String&quot;;
+char cstring[10] = "My String";
 for (int i = -1, leni = strlen(cstring); ++i &lt; leni; ) {
   cout &lt;&lt; cstring[i];
 }

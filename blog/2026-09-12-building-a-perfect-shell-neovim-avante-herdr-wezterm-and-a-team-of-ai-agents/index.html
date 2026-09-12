@@ -6,19 +6,17 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Java Generics are a very powerful feature of Java and any programming language that implements them. Generics are not the easiest of topics to master and…">
+        <meta name="description" content="Over the past several weeks I rebuilt my Linux desktop and terminal setup from the ground up, using AI coding agents not just as tools I called on occasionally but as active participants in the work…">
       
       
         <meta name="author" content="dcoder">
       
       
-        <link rel="canonical" href="https://dcoder.nz/blog/2016-05-09-java-generics-wildcards-why-collections-set-contains-object/">
+        <link rel="canonical" href="https://dcoder.nz/blog/2026-09-12-building-a-perfect-shell-neovim-avante-herdr-wezterm-and-a-team-of-ai-agents/">
       
       
-        <link rel="prev" href="../2016-02-03-search-engine-optimization-google-duckduckgo-bing/">
+        <link rel="prev" href="../2024-05-18-senior-developer-thoughts/">
       
-      
-        <link rel="next" href="../2017-06-24-computer-science-what-it-really-is/">
       
       
         
@@ -32,7 +30,7 @@
     
     
       
-        <title>Why Java Generics have wildcards and Set.contains(Object) - dcoder.nz</title>
+        <title>Building a Perfect Shell: Neovim, Avante, Herdr, WezTerm, and a Team of AI Agents - dcoder.nz</title>
       
     
     
@@ -96,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#why-java-generics-have-wildcards-and-setcontainsobject" class="md-skip">
+        <a href="#building-a-perfect-shell-neovim-avante-herdr-wezterm-and-a-team-of-ai-agents" class="md-skip">
           Skip to content
         </a>
       
@@ -129,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Why Java Generics have wildcards and Set.contains(Object)
+              Building a Perfect Shell: Neovim, Avante, Herdr, WezTerm, and a Team of AI Agents
             
           </span>
         </div>
@@ -475,6 +473,102 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-starting-point-nine-years-of-accumulated-vim" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The starting point: nine years of accumulated vim
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avante-giving-neovim-a-seat-at-the-agent-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Avante: giving Neovim a seat at the agent table
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herdr-making-agent-state-visible-in-the-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Herdr: making agent state visible in the terminal
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-clipboard-rabbit-hole" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The clipboard rabbit hole
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wezterm-from-windows-first-config-to-a-portable-host-aware-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WezTerm: from Windows-first config to a portable, host-aware setup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-cachyoshyprland-desktop-built-to-be-reproducible" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The CachyOS/Hyprland desktop, built to be reproducible
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-the-agents-disagreed-with-each-other-and-with-physics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where the agents disagreed with each other (and with physics)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-throughline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The throughline
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -529,7 +623,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2016-05-09 00:00:00+00:00" class="md-ellipsis">May 9, 2016</time>
+                        <time datetime="2026-09-12 00:00:00+00:00" class="md-ellipsis">September 12, 2026</time>
                       </div>
                     </li>
                     
@@ -540,7 +634,7 @@
                           <span class="md-ellipsis">
                             in
                             
-                              <a href="../category/engineering/">Engineering</a></span>
+                              <a href="../category/developer-workflow/">Developer workflow</a></span>
                         </div>
                       </li>
                     
@@ -551,7 +645,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              3 min read
+                              8 min read
                             
                           </span>
                         </div>
@@ -579,67 +673,217 @@
       
       
       
-        <a href="../../tags/#tag:java" class="md-tag">Java</a>
+        <a href="../../tags/#tag:ai-agents" class="md-tag">AI agents</a>
+      
+    
+      
+      
+      
+      
+        <a href="../../tags/#tag:developer-workflow" class="md-tag">Developer workflow</a>
+      
+    
+      
+      
+      
+      
+        <a href="../../tags/#tag:neovim" class="md-tag">Neovim</a>
       
     
   </nav>
 
 
 
-<h1 id="why-java-generics-have-wildcards-and-setcontainsobject">Why Java Generics have wildcards and Set.contains(Object)<a class="headerlink" href="#why-java-generics-have-wildcards-and-setcontainsobject" title="Permanent link">&para;</a></h1>
-<p>Java Generics are a very powerful feature of Java and any programming language that implements them. Generics are not the easiest of topics to master and something about them just tripped me up, although I thought I understood them completely.</p>
+<h1 id="building-a-perfect-shell-neovim-avante-herdr-wezterm-and-a-team-of-ai-agents">Building a Perfect Shell: Neovim, Avante, Herdr, WezTerm, and a Team of AI Agents<a class="headerlink" href="#building-a-perfect-shell-neovim-avante-herdr-wezterm-and-a-team-of-ai-agents" title="Permanent link">&para;</a></h1>
+<p>Over the past several weeks I rebuilt my Linux desktop and terminal setup from
+the ground up, using AI coding agents not just as tools I called on
+occasionally but as active participants in the work — reading my own commit
+history, fixing regressions they introduced, and diagnosing hardware quirks
+that would have taken me hours to track down alone. This is the story of how
+Neovim, Avante, Herdr, and WezTerm came together into one coherent setup, and
+what it looked like to have Codex, Cursor, and Claude Code all contribute to
+the same <code>~/.dotfiles</code> repository.</p>
 <!-- more -->
 
-<p>In fact, I was wrong! I did not understand wildcards, which is why it puzzled me, to say the least, that the Map interface's method has this signature:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">public</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">key</span><span class="p">);</span>
-</code></pre></div>
-<p>To understand this, one must first understand wildcards and bounds thereof. A wildcard is a special type of generic, that can mean basically any type. Its syntax is simply '?'.</p>
-<p>For example (see <a href="http://www.amazon.com/Java-Complete-Reference-Herbert-Schildt/dp/0071808558">Java: The Complete Reference</a>). It has a good explanation of why one would need such construct.</p>
-<p>The gist is the example of having a type that one might want to compare internally with another object of the same type, which internally has different object types.</p>
-<p>To be more clear, here is a simplified example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MyCollection</span><span class="o">&lt;</span><span class="n">T</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Number</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">T</span><span class="o">[]</span><span class="w"> </span><span class="n">elements</span><span class="p">;</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">MyCollection</span><span class="p">(</span><span class="n">T</span><span class="o">[]</span><span class="w"> </span><span class="n">newElements</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">        </span><span class="n">elements</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newElements</span><span class="p">;</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="nf">average</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">elements</span><span class="p">).</span><span class="na">stream</span><span class="p">()</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">                </span><span class="p">.</span><span class="na">mapToDouble</span><span class="p">(</span><span class="n">Number</span><span class="p">::</span><span class="n">doubleValue</span><span class="p">)</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">                </span><span class="p">.</span><span class="na">average</span><span class="p">()</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">                </span><span class="p">.</span><span class="na">getAsDouble</span><span class="p">();</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">        </span><span class="n">MyCollection</span><span class="o">&lt;</span><span class="n">Double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">dob</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MyCollection</span><span class="o">&lt;&gt;</span><span class="p">(</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">                </span><span class="k">new</span><span class="w"> </span><span class="n">Double</span><span class="o">[]</span><span class="p">{</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0</span><span class="p">,</span><span class="w"> </span><span class="mf">3.0</span><span class="p">,</span><span class="w"> </span><span class="mf">4.0</span><span class="p">,</span><span class="w"> </span><span class="mf">5.0</span><span class="p">}</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">        </span><span class="p">);</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">        </span><span class="n">MyCollection</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">iob</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MyCollection</span><span class="o">&lt;&gt;</span><span class="p">(</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">                </span><span class="k">new</span><span class="w"> </span><span class="n">Integer</span><span class="o">[]</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">}</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">        </span><span class="p">);</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;dob = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dob</span><span class="p">);</span>
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;iob = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">iob</span><span class="p">);</span>
-<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Same average? &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dob</span><span class="p">.</span><span class="na">sameAverage</span><span class="p">(</span><span class="n">iob</span><span class="p">));</span>
-<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">        </span><span class="c1">//System.out.println(&quot;Same average without bounds? &quot; + dob.sameAverageWithoutBounds(iob)); // doesn&#39;t compile!</span>
-<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">sameAverage</span><span class="p">(</span><span class="n">MyCollection</span><span class="o">&lt;?</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Number</span><span class="o">&gt;</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">average</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="na">average</span><span class="p">();</span>
-<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">sameAverageWithoutBounds</span><span class="p">(</span><span class="n">MyCollection</span><span class="o">&lt;</span><span class="n">Number</span><span class="o">&gt;</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">average</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="na">average</span><span class="p">();</span>
-<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">elements</span><span class="p">);</span>
-<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="p">}</span>
-</code></pre></div>
-<p>As you can see, this line:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Same average without bounds? &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dob</span><span class="p">.</span><span class="na">sameAverageWithoutBounds</span><span class="p">(</span><span class="n">iob</span><span class="p">));</span><span class="w"> </span><span class="c1">// doesn&#39;t compile!</span>
-</code></pre></div>
-<p>will cause the build to fail. This surprised me as it probably does you now if you haven't understood Java Generics correctly like myself before.</p>
-<p>The wild card operator is actually necessary, not because of backward-compatibility, but because of more type safety, which Java is strong on and which, in my opinion makes it superior to dynamically typed languages. It captures a whole lot of potential bugs that otherwise would not be found.</p>
-<p>The reason I am blogging about this was a bug in my code which was essentially because of the Map.get signature above. I was passing in a B when I should have passed in an A (A was String and B some other specific type). So, essentially I put in an apple when I should have put in an orange.</p>
-<p>Unfortunately, with wild cards being part of the language, and for good reason as explained above, Map.get and the other Collection classes have to take an Object type rather than an E (Set) or a K (Map). This is definitely the lesser of the evils and maximizes type safty as far as it can.</p>
-<p>One could write extra classes if one wanted a StrictMap etc. I've done a proof of concept at my <a href="https://github.com/geekdenz/java-collections">Github Java Collections repository</a>. However, as you can see from my efforts, containsStrict(E element) and its example, it becomes useless as is explained on <a href="https://stackoverflow.com/questions/857420/what-are-the-reasons-why-map-getobject-key-is-not-fully-generic/857452#answer-857481">Stack Overflow's thread about this topic</a>. I could not understand this without going through the excercise of actually implementing this.</p>
-<p>So, I hope that through my examples you will understand why we have those interfaces and classes in the Java Collections framework and why this makes Java so great.</p>
+<h2 id="the-starting-point-nine-years-of-accumulated-vim">The starting point: nine years of accumulated vim<a class="headerlink" href="#the-starting-point-nine-years-of-accumulated-vim" title="Permanent link">&para;</a></h2>
+<p>My dotfiles repo goes back to 2016. Two hundred and sixty-plus commits trace a
+slow evolution from raw Vim with Vundle, through PHP and Java tooling, NVM and
+SDKMAN installers, tmux mappings, and eventually a full switch to Neovim and
+LazyVim. That history matters, because none of the recent AI-agent work
+happened in a vacuum — every fix had to respect years of muscle memory (leader
+keys, undo mappings, clipboard behavior) baked into how I actually use a
+terminal.</p>
+<p>The recent phase of the project had a different goal: stop maintaining a pile
+of Vim tricks and instead build a <em>reproducible, portable</em> setup — one where
+an AI agent could read the repo, understand the intent, and safely make
+changes without me having to hand-hold every step.</p>
+<h2 id="avante-giving-neovim-a-seat-at-the-agent-table">Avante: giving Neovim a seat at the agent table<a class="headerlink" href="#avante-giving-neovim-a-seat-at-the-agent-table" title="Permanent link">&para;</a></h2>
+<p>The centerpiece of the AI integration is <a href="https://github.com/yetone/avante.nvim">avante.nvim</a>,
+configured in <code>nvim/lua/plugins/avante.lua</code>. Avante turns Neovim into an agent
+client rather than a plain editor — it can drive an AI coding agent's
+Agent-Client Protocol (ACP) directly from inside a buffer.</p>
+<p>The setup went through a few iterations of provider work:</p>
+<ul>
+<li><code>feat(nvim): use Codex ACP for Avante</code> — wired up Codex as the primary
+  provider, forcing ChatGPT/browser authentication so no API key needs to
+  live in the dotfiles.</li>
+<li><code>feat(nvim): add Cursor provider to Avante</code> — added Cursor as a second,
+  switchable backend (<code>:AvanteSwitchProvider</code>), pointed at the local
+  <code>agent acp</code> binary.</li>
+<li><code>feat(herdr): integrate Avante ACP providers</code> — the piece that ties Avante
+  into Herdr (below), so whichever agent is actually driving Neovim shows up
+  correctly in the terminal UI.</li>
+</ul>
+<p>The two providers are declared side by side in <code>acp_providers</code>, each with its
+own <code>command</code>, <code>args</code>, and <code>auth_method</code>, so switching from Codex to Cursor
+mid-session is a single command rather than a config reload.</p>
+<h2 id="herdr-making-agent-state-visible-in-the-terminal">Herdr: making agent state visible in the terminal<a class="headerlink" href="#herdr-making-agent-state-visible-in-the-terminal" title="Permanent link">&para;</a></h2>
+<p><a href="https://github.com/">Herdr</a> is the piece that turns "is an agent still
+thinking?" from a guess into something visible. It renders a small sidebar of
+agent rows per terminal pane, and <code>nvim/lua/config/herdr_avante.lua</code> bridges
+Avante into it:</p>
+<ul>
+<li>It wraps <code>avante.llm.stream</code> so that every time Avante starts or stops
+  streaming a response, Herdr's sidebar flips between <code>working</code> and <code>idle</code>
+  for that pane.</li>
+<li>It wraps <code>avante.api.switch_provider</code> so the sidebar's <code>$provider</code> token
+  updates immediately when I switch from Codex ACP to Cursor ACP.</li>
+<li>It releases the agent row cleanly on <code>VimLeavePre</code>, so closing Neovim
+  doesn't leave a stale "still working" indicator behind.</li>
+</ul>
+<p>Everything here degrades gracefully: <code>is_available()</code> checks for
+<code>HERDR_ENV</code>, a pane ID, and the <code>herdr</code> binary before doing anything, so the
+exact same Neovim config works unchanged outside of a Herdr session.</p>
+<p>Herdr itself needed its own fixes along the way — <code>Fix Herdr wrapper state
+tracking</code>, <code>Fix Herdr highlighted text contrast</code>, and most recently <code>Tune
+Herdr panel contrast colors</code>, which corrected a theme regression where
+Herdr 0.8.2 started drawing tab labels in near-white text on a light panel
+background, making them unreadable. <code>herdr/config.toml</code> now pins
+<code>panel_bg = "reset"</code> and darker custom surface colors specifically to avoid
+that.</p>
+<h2 id="the-clipboard-rabbit-hole">The clipboard rabbit hole<a class="headerlink" href="#the-clipboard-rabbit-hole" title="Permanent link">&para;</a></h2>
+<p>One of the least glamorous but most persistent fights was getting copy/paste
+to work correctly across Neovim, Herdr, and a Wayland compositor. The commit
+history has an honest trail of attempts: <code>feat(clipboard): fix nvim clipboard
+with herdr</code>, <code>Fix Neovim clipboard in HerdR</code>, <code>feat(copy,hyprland): repair
+copy-paste from nvim, allow hyprland capture text (untested)</code> (twice — the
+first attempt needed a second pass).</p>
+<p>The eventual fix, in <code>nvim/lua/config/clipboard.lua</code>, is small but specific:
+Neovim's <code>clipboard</code> option is set to <code>unnamedplus</code>, and a <code>TextYankPost</code>
+autocommand explicitly pushes yanked text out over <strong>OSC 52</strong> using
+<code>vim.ui.clipboard.osc52</code>. OSC 52 is the terminal escape sequence that lets an
+application set the system clipboard through the terminal emulator itself
+rather than talking to a display server directly — which matters a lot when
+the "terminal" is a remote SSH session or a pane inside Herdr, neither of
+which has a normal path to the Wayland clipboard.</p>
+<p>The very last piece of this chain broke by accident: <code>require("config.clipboard")</code>
+started returning a bare Lua <code>true</code> instead of a table, and <code>init.lua</code> called
+<code>.setup()</code> on it — a one-line regression that took Neovim down with <code>attempt
+to index a boolean value</code> until it was caught and fixed as part of a larger
+desktop cleanup commit.</p>
+<h2 id="wezterm-from-windows-first-config-to-a-portable-host-aware-setup">WezTerm: from Windows-first config to a portable, host-aware setup<a class="headerlink" href="#wezterm-from-windows-first-config-to-a-portable-host-aware-setup" title="Permanent link">&para;</a></h2>
+<p><code>.wezterm.lua</code> started life heavily Windows-oriented — Visual Studio dev
+shells, MSYS2 launch menu entries, WSL profiles. Getting it to behave well as
+the <em>default terminal on a CachyOS/Hyprland desktop</em> took several rounds:</p>
+<ul>
+<li><code>feat(wezterm): add wezterm config</code>, <code>define better keys</code>, <code>add linux zsh
+  launcher</code> — the initial Linux-side config.</li>
+<li><code>Hide WezTerm tab bar for single tab</code> — small ergonomics.</li>
+<li><code>Fix WezTerm behavior on Hyprland</code> — made WezTerm respect native-Wayland
+  vs. XWayland behavior per host, since a fresh GUI process can't inherit an
+  already-running XWayland backend.</li>
+<li>Custom <strong>mouse bindings</strong> to keep Herdr's terminal mouse-reporting (which it
+  needs for its own UI) from stealing middle-click primary-selection paste —
+  WezTerm now intercepts only the middle button while mouse reporting is
+  active, leaving left/right clicks, drags, and the wheel to Herdr.</li>
+</ul>
+<p>The most recent WezTerm fix is a good example of what "having an AI agent
+that reads its own history" actually buys you: a repo-wide history
+sanitization pass (removing personal hostnames, IPs, and emails from every
+commit) had replaced the real hostname in <code>.wezterm.lua</code>'s
+<code>enable_wayland</code> check with the literal placeholder string <code>"example-host"</code>
+instead of moving it into the ignored <code>.env</code> file, the way every <em>other</em>
+host-specific value in the repo is handled. The comparison silently always
+evaluated false, so WezTerm had been quietly falling back to XWayland the
+entire time. On a 4K display running at 1.5x fractional scaling, XWayland
+renders at 1x and gets upscaled by the compositor — which shows up as visible
+pixelation, most noticeably in a dense terminal UI like Herdr's. The fix
+mirrors the pattern already used in <code>hyprland.lua</code>: read the intended
+hostname from <code>.env</code>'s <code>CACHYOS_HARDWARE_HOSTNAME</code>, compare it against
+<code>wezterm.hostname()</code>, and only enable native Wayland — and, while at it, a
+~19% smaller font size tuned for this display — on the one machine it's meant
+for.</p>
+<h2 id="the-cachyoshyprland-desktop-built-to-be-reproducible">The CachyOS/Hyprland desktop, built to be reproducible<a class="headerlink" href="#the-cachyoshyprland-desktop-built-to-be-reproducible" title="Permanent link">&para;</a></h2>
+<p>In parallel, the desktop itself became a proper reproducible install rather
+than a pile of manual tweaks:</p>
+<ul>
+<li><code>Add CachyOS Hyprland desktop setup</code> and <code>feat(cachyos): make desktop setup
+  reproducible</code> — Hyprland, Waybar (styled after Omarchy's top bar, with an
+  OS-detecting launcher script so the same config renders correctly whether
+  it's running under CachyOS or another distro), hyprlock, and a daily
+  wallpaper picker that chooses one random image per calendar day and keeps
+  it stable until the next.</li>
+<li>OCR screen capture (<code>capture-text</code>), reproducing Omarchy's
+  <code>grim → hyprpicker/slurp → tesseract → wl-copy</code> flow as a portable script
+  and installer package list, bound to <code>Ctrl+Super+Print</code>.</li>
+<li>A <strong>persistent per-user SSH agent</strong> as a <code>systemd --user</code> service, so the
+  key passphrase is entered once per login rather than once per terminal.</li>
+<li><code>feat(hypr): load hardware layouts by hostname</code> — monitor layouts and GPU
+  workarounds now live in per-machine profile files
+  (<code>hypr-cachyos/hosts/&lt;hostname&gt;.lua</code>), keyed off <code>/etc/hostname</code>, so
+  installing on a second machine can never silently inherit this machine's
+  physical monitor arrangement.</li>
+<li><code>security(dotfiles): move host values to ignored env</code> and a full
+  <code>git filter-repo</code> history rewrite — Remmina profiles, Git identity, and
+  local IPs were pulled out into an ignored <code>.env</code> (with a fake <code>.env.example</code>
+  checked in), and the rewrite scrubbed the same values out of every prior
+  commit before the branch was ever pushed publicly.</li>
+</ul>
+<h2 id="where-the-agents-disagreed-with-each-other-and-with-physics">Where the agents disagreed with each other (and with physics)<a class="headerlink" href="#where-the-agents-disagreed-with-each-other-and-with-physics" title="Permanent link">&para;</a></h2>
+<p>A few of the more interesting fixes in this repo exist specifically <em>because</em>
+different agents, working at different times, changed the same machine:</p>
+<ul>
+<li><strong>Waybar kept crashing.</strong> Adding automatic idle-lock behavior via
+  <code>hypridle</code> (lock after 5 minutes idle, suspend after 15) is good security
+  practice, but the first version also cycled the display off and back on
+  with <code>hyprctl dispatch dpms off/on</code>. On this machine's NVIDIA GPU, that
+  DPMS cycle reliably broke Waybar's Wayland connection (<code>Error 22, dispatching
+  to Wayland display</code>), killing the bar a few minutes into every idle period.
+  The fix dropped the DPMS listener and kept only the lock and suspend
+  timeouts — the lock screen already covers the actual security goal.</li>
+<li><strong>WezTerm crashed on wake from suspend.</strong> After enabling the idle-suspend
+  behavior above, WezTerm occasionally greeted a resume with <code>running message
+  loop: Io error: Resource temporarily unavailable (os error 11)</code>. The real
+  cause wasn't WezTerm at all: <code>nvidia-suspend.service</code>,
+  <code>nvidia-resume.service</code>, and <code>nvidia-hibernate.service</code> — the driver's own
+  hooks for saving and restoring GPU state across suspend — were disabled by
+  default. <code>install-hyprland-cachyos.sh</code> now enables all three automatically
+  whenever it detects an NVIDIA install, so a fresh setup doesn't inherit the
+  same multi-day-old crash.</li>
+<li><strong>A security fix got quietly reverted.</strong> <code>hypr/xdph.conf</code>'s
+  <code>allow_token_by_default</code> was flipped from <code>true</code> to <code>false</code> (requiring an
+  explicit prompt before any app can screen-share or screenshot), then later
+  found reverted back to <code>true</code> on disk by a separate, unreviewed change —
+  a reminder that "portable and reproducible" also means periodically
+  re-checking that a fix actually stuck.</li>
+</ul>
+<h2 id="the-throughline">The throughline<a class="headerlink" href="#the-throughline" title="Permanent link">&para;</a></h2>
+<p>None of this reads as a single clean plan executed start to finish — it reads
+like what it actually was: a running conversation across multiple AI agents
+and multiple sessions, each one picking up from git history and live system
+state rather than from a shared memory of "what we already decided." Avante
+and Herdr made that conversation visible from inside Neovim; the <code>.env</code> +
+per-hostname profile pattern made it safe to keep experimenting on one real
+machine without ever risking another; and the two funniest bugs in the whole
+project — Waybar dying on DPMS, WezTerm dying on suspend — were both cases
+where fixing one problem (idle security) quietly created another, which is
+exactly the kind of thing that's easy to miss when a human makes one change at
+a time, and much easier to catch when an agent can grep its own recent
+history, correlate a crash timestamp against <code>journalctl</code>, and go looking for
+the real root cause instead of the first plausible one.</p>
+<hr />
+<p><em>This article summarizes changes tracked in <code>~/.dotfiles</code> on the
+<code>feature/portable-linux-bootstrap</code> branch, current as of commit <code>87e5fd6</code>.</em></p>
 
 
 

@@ -607,14 +607,14 @@
 </ol>
 <p>I could go on but maybe it is better to have some examples:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">def</span><span class="w"> </span><span class="n">hello</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="s1">'key1'</span><span class="o">:</span><span class="w"> </span><span class="s1">'list item 1'</span><span class="o">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="s1">'world'</span><span class="o">:</span><span class="w"> </span><span class="s1">'Hello world!'</span><span class="o">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="s1">'key3'</span><span class="o">:</span><span class="w"> </span><span class="s1">'list item 3'</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="s1">&#39;key1&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;list item 1&#39;</span><span class="o">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="s1">&#39;world&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Hello world!&#39;</span><span class="o">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="s1">&#39;key3&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;list item 3&#39;</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">   </span><span class="o">]</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">task</span><span class="w"> </span><span class="n">toTheWorld</span><span class="w"> </span><span class="o">{</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="n">doLast</span><span class="w"> </span><span class="o">{</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="n">println</span><span class="w"> </span><span class="s2">"${hello.world}"</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="n">println</span><span class="w"> </span><span class="s2">&quot;${hello.world}&quot;</span>
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="o">}</span>
 <a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="o">}</span>
 </code></pre></div>
@@ -644,8 +644,8 @@
 </code></pre></div>
 <p>serves and watches the changes happening, so that one can write one's blog post, save it and see the result in one's browser. So, I decided to just write a simple execute task that does just that:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">task</span><span class="w"> </span><span class="nf">serve</span><span class="o">(</span><span class="nl">type:</span><span class="w"> </span><span class="n">Exec</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">commandLine</span><span class="w"> </span><span class="s1">'jekyll'</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">args</span><span class="w"> </span><span class="s1">'serve'</span><span class="o">,</span><span class="w"> </span><span class="s1">'-w'</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">commandLine</span><span class="w"> </span><span class="s1">&#39;jekyll&#39;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">args</span><span class="w"> </span><span class="s1">&#39;serve&#39;</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;-w&#39;</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="o">}</span>
 </code></pre></div>
 <p>This defines the task 'serve' which is of type Exec, so it extends the Exec class which is a task type you can use to execute command line programs and basically can do anything that can be done on the command line. So, if you have some command line scripts and you want to transition slowly to Gradle, this can be achieved quite easily.</p>
@@ -655,15 +655,15 @@
 <p>At the moment I am deploying to my own server in the cloud. I have tried using the SSH plugin but actually found it harder than just using an Exec task. So, that is simply what I will do.</p>
 <p>However, before uploading, I would like the system to build my site. So, the first task to specify is build:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">task</span><span class="w"> </span><span class="nf">buildJekyll</span><span class="o">(</span><span class="nl">type:</span><span class="w"> </span><span class="n">Exec</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">commandLine</span><span class="w"> </span><span class="s1">'jekyll'</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">args</span><span class="w"> </span><span class="s1">'build'</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">commandLine</span><span class="w"> </span><span class="s1">&#39;jekyll&#39;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">args</span><span class="w"> </span><span class="s1">&#39;build&#39;</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="o">}</span>
 </code></pre></div>
 <p>Now finally the deployment task. Note that this depends on build, so it first builds the site.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">task</span><span class="w"> </span><span class="nf">deploy</span><span class="o">(</span><span class="nl">type:</span><span class="w"> </span><span class="n">Exec</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">dependsOn</span><span class="w"> </span><span class="n">buildJekyll</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="n">commandLine</span><span class="w"> </span><span class="s1">'rsync'</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="n">args</span><span class="w"> </span><span class="s1">'-avp'</span><span class="o">,</span><span class="w"> </span><span class="s1">'--progress'</span><span class="o">,</span><span class="w"> </span><span class="s1">'./_site/'</span><span class="o">,</span><span class="w"> </span><span class="s1">'denz@dcoderdenz:/var/www/thheuer.com/'</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="n">commandLine</span><span class="w"> </span><span class="s1">&#39;rsync&#39;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="n">args</span><span class="w"> </span><span class="s1">&#39;-avp&#39;</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;--progress&#39;</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;./_site/&#39;</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;denz@dcoderdenz:/var/www/thheuer.com/&#39;</span>
 <a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="o">}</span>
 </code></pre></div>
 <p>As you can see, Gradle can be used for any build needs, even for just executing commands.</p>
